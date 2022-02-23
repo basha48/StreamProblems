@@ -1,7 +1,9 @@
 package com.addressbook.streams;
 
 import java.util.ArrayList;
+import java.util.Dictionary;
 import java.util.HashSet;
+import java.util.Hashtable;
 import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
@@ -11,6 +13,18 @@ import java.util.stream.Collectors;
 public class AddressBookProblems {
 	
 	static List<Contact> peoples = new ArrayList<Contact>();
+	static List<Contact> persons = new ArrayList<Contact>();
+	
+	 Scanner sc = new Scanner(System.in);
+	 Contact person = new Contact();
+	 public List<Contact> people = new ArrayList<Contact>();
+	 
+	public void AddressBookSystem() {	
+	Hashtable<String, Object> addressBookSystem = new Hashtable<String, Object>();
+	addressBookSystem.put("Hydrabad", peoples);
+	System.out.println("peoples in hyderabad are :" + addressBookSystem.get("Hydrabad"));
+	}
+	
 	public static <T> Set<Contact> findDuplicateBySetAdd(List<T> list) {
         Set<T> items = new HashSet<>();
         return peoples.stream()
@@ -40,10 +54,6 @@ public class AddressBookProblems {
 		System.out.println("The no of persons in a city are " + count);
 			 
 	 }
-	 
-	 Scanner sc = new Scanner(System.in);
-	 Contact person = new Contact();
-	 public List<Contact> people = new ArrayList<Contact>();
 	 
 	 public void addContacts() {
 		
